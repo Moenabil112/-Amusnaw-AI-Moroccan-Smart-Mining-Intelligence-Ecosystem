@@ -7,6 +7,8 @@ export const en: SiteContent = {
     tagline: "Moroccan Smart Mining Intelligence Ecosystem",
     description:
       "A structured digital window for mining intelligence, governance, and strategic decision-making.",
+    definition:
+      "Amusnaw AI is a Moroccan institutional intelligence ecosystem that converts geological signals, field evidence, mineral value references, and governance records into decision-ready mining intelligence.",
   },
   nav: {
     brand: "Amusnaw AI",
@@ -38,12 +40,123 @@ export const en: SiteContent = {
       "QASSAS generates the exploration intelligence. Aguelmous demonstrates Moroccan smart fault R&D. Isseksi proves field and industrial readiness. HYRION governs the evidence and value logic. ZYNTRA enables the technology stack. AKANIL frames the institutional gateway. Amusnaw AI connects them into one Moroccan smart mining intelligence ecosystem.",
     disclaimer:
       "All mineral prices and value indicators are indicative market references only. They do not represent reserve valuation, asset valuation, revenue, or investment return. Any value scenario requires verified tonnage, grade, recovery, payable factors, CAPEX/OPEX, legal status, and HYRION evidence governance.",
+    disclaimerCompact:
+      "Market references are not asset valuations. All value scenarios require verified tonnage, grade, recovery, payable factors, cost modeling, legal status, and HYRION evidence governance.",
     notAssetValuation: "Indicative market reference — not asset valuation.",
     poweredByHyrion: "Powered by HYRION",
     explore: "Open window",
+    output: "Output",
     role: "Role",
     learnMore: "Learn more",
     backToEcosystem: "Back to ecosystem",
+  },
+  nodes: {
+    qassas: {
+      role: "Exploration Intelligence Engine",
+      description:
+        "Generates exploration intelligence from geological context, satellite imagery, terrain, drainage systems, fault indicators, field observations, and expert knowledge.",
+      output:
+        "Target scores, survey routes, mineral signal layers, and field validation plans.",
+    },
+    aguelmous: {
+      role: "Smart Fault Exploration R&D Demonstrator",
+      description:
+        "Tests how Moroccan fault-controlled geology can be transformed into AI-assisted exploration targets with measurable market relevance.",
+      output:
+        "Fault models, terrain layers, AI target hypotheses, and R&D decision gates.",
+    },
+    isseksi: {
+      role: "Ready Mining Intelligence & Governance Product",
+      description:
+        "Provides the field and industrial proof layer for copper intelligence, mobile processing logic, cement copper scenarios, ESG monitoring, and validation gates.",
+      output:
+        "Field evidence, copper product logic, processing assumptions, and governance-ready proof.",
+    },
+    hyrion: {
+      role: "Governance, Evidence & Trust Control Layer",
+      description:
+        "Controls how evidence, market references, assays, license context, validation status, and access permissions are governed before institutional review.",
+      output:
+        "Evidence index, access control, value-governance status, audit trail, and decision memos.",
+    },
+    zyntra: {
+      role: "Technology & AI Enablement Layer",
+      description:
+        "Provides the technical stack required to operate the ecosystem through AI models, geospatial interfaces, secure data pipelines, RAG readiness, APIs, and scalable UI systems.",
+      output:
+        "AI interfaces, data pipelines, secure architecture, and automation layers.",
+    },
+    akanil: {
+      role: "Strategic Originator & Institutional Gateway",
+      description:
+        "Frames the ecosystem institutionally and connects Moroccan positioning, African field intelligence, partner structuring, and strategic entry logic.",
+      output:
+        "Institutional narrative, partner access structure, corridor logic, and governance framing.",
+    },
+  },
+  ecosystemLines: [
+    { code: "QASSAS", line: "QASSAS reads the ground." },
+    { code: "Aguelmous", line: "Aguelmous tests the R&D frontier." },
+    { code: "Isseksi", line: "Isseksi proves the field product." },
+    { code: "HYRION", line: "HYRION governs evidence and value." },
+    { code: "ZYNTRA", line: "ZYNTRA enables the technology stack." },
+    { code: "AKANIL", line: "AKANIL frames institutional entry." },
+    {
+      code: "Amusnaw AI",
+      line: "Amusnaw AI connects the system into a Moroccan mineral intelligence layer.",
+    },
+  ],
+  ecosystemPage: {
+    intro: {
+      eyebrow: "Institutional overview",
+      whatIsTitle: "What is Amusnaw AI?",
+      whatIs:
+        "Amusnaw AI is a Moroccan institutional intelligence ecosystem that converts geological signals, field evidence, mineral value references, and governance records into decision-ready mining intelligence.",
+      whyTitle: "Why Morocco needs this ecosystem",
+      why: "Mineral evidence in Morocco is scattered across geology, field work, laboratories, and institutional files. Amusnaw AI structures that evidence so the country can move from raw exploration signals to governed institutional decisions — responsibly, and without exaggerated value claims.",
+    },
+    map: {
+      title: "What are the layers of the ecosystem, and how do they work together?",
+      subtitle:
+        "Six specialized layers work together to move mineral opportunities from exploration signals to governed institutional decisions.",
+    },
+    workflow: {
+      title: "How the ecosystem moves from signal to decision",
+      subtitle:
+        "Each layer hands its output to the next, ending in a Moroccan institutional decision layer.",
+    },
+    mineralScope: {
+      title: "Mineral Scope Managed by the Ecosystem",
+      intro:
+        "The ecosystem is designed to structure intelligence around minerals that matter for electrification, EV supply chains, AI data centers, industrial resilience, and Moroccan strategic value chains.",
+      families: [
+        "Copper and base metals",
+        "Gold and precious metals",
+        "Battery metals",
+        "Rare earth and magnet metals",
+        "Phosphate and Moroccan strategic minerals",
+        "Industrial minerals and field-linked indicators",
+      ],
+      note: "Shown as market-reference scope only. Detailed market values belong to the Market Value Board.",
+    },
+    valueGovernance: {
+      title: "Value is governed before it is presented",
+      copy: "Market prices alone do not define asset value. HYRION separates commodity benchmarks from verified evidence, assay support, resource modeling, recovery assumptions, cost models, and legal validation.",
+    },
+    relevance: {
+      title: "What each institution should understand",
+      subtitle:
+        "The ecosystem is built for serious institutional review — not for fundraising or promotion.",
+    },
+    cta: {
+      title: "Enter the ecosystem",
+      actions: [
+        { label: "Explore Mineral Universe", href: "/minerals" },
+        { label: "Open HYRION Governance", href: "/hyrion" },
+        { label: "Access Data Room", href: "/data-room" },
+        { label: "Request Strategic Access", href: "/strategic-entry" },
+      ],
+    },
   },
   governanceLabels: {
     marketReference: "Market Reference",
@@ -90,10 +203,10 @@ export const en: SiteContent = {
     },
     ecosystem: {
       id: "01",
-      question: "What are the components of the ecosystem, and who does what?",
+      question: "What are the layers of the ecosystem, and how do they work together?",
       title: "Ecosystem Map",
       answer:
-        "Six specialized layers orbit a central intelligence hub. Hover a node to reveal its role and connections.",
+        "Amusnaw AI connects six complementary layers. Each layer has a specific responsibility: generating exploration intelligence, testing R&D logic, proving field readiness, governing evidence, enabling technology, and framing institutional entry.",
     },
     problem: {
       id: "02",
@@ -286,13 +399,13 @@ export const en: SiteContent = {
       message:
         "This is not a collection of disconnected projects. It is a sequenced intelligence-to-governance ecosystem.",
       steps: [
-        { code: "QASSAS", action: "generates exploration intelligence" },
+        { code: "QASSAS", action: "identifies exploration signals" },
         { code: "Aguelmous", action: "tests smart fault R&D logic" },
         { code: "Isseksi", action: "proves field and industrial readiness" },
-        { code: "HYRION", action: "governs evidence, value references, and access" },
-        { code: "ZYNTRA", action: "enables technical interfaces and AI systems" },
-        { code: "AKANIL", action: "frames institutional entry" },
-        { code: "Amusnaw AI", action: "presents the Moroccan strategic decision layer" },
+        { code: "HYRION", action: "governs the evidence and value logic" },
+        { code: "ZYNTRA", action: "enables the technology stack" },
+        { code: "AKANIL", action: "frames the institutional gateway" },
+        { code: "Amusnaw AI", action: "presents the final Moroccan decision layer" },
       ],
     },
     matrix: {

@@ -95,21 +95,34 @@ export function EcosystemOrbit() {
               transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
               whileHover={reduce ? undefined : { scale: 1.08 }}
             >
-              <span
-                className={cn(
-                  "flex h-14 w-14 flex-col items-center justify-center rounded-full border bg-graphite-900/90 text-center backdrop-blur transition-all sm:h-16 sm:w-16",
-                  isActive ? "border-2" : "border border-white/15",
-                )}
-                style={{
-                  borderColor: isActive ? tokens.accent : undefined,
-                  boxShadow: isActive ? `0 0 28px -4px ${tokens.glow}` : undefined,
-                }}
-              >
+              <span className="relative flex flex-col items-center">
                 <span
-                  className="font-mono text-[10px] font-semibold uppercase tracking-tight sm:text-[11px]"
-                  style={{ color: tokens.accent }}
+                  className={cn(
+                    "flex h-12 w-12 items-center justify-center rounded-full border bg-graphite-900/90 backdrop-blur transition-all sm:h-14 sm:w-14",
+                    isActive ? "border-2" : "border border-white/15",
+                  )}
+                  style={{
+                    borderColor: isActive ? tokens.accent : undefined,
+                    boxShadow: isActive ? `0 0 28px -4px ${tokens.glow}` : undefined,
+                  }}
                 >
-                  {node.code.slice(0, 4)}
+                  {/* Single-letter monogram mark (not a truncated label) */}
+                  <span
+                    className="font-mono text-base font-semibold sm:text-lg"
+                    style={{ color: tokens.accent }}
+                    aria-hidden
+                  >
+                    {node.name.charAt(0)}
+                  </span>
+                </span>
+                {/* Full, untruncated node name */}
+                <span
+                  className={cn(
+                    "absolute top-full mt-1 whitespace-nowrap rounded px-1.5 py-0.5 text-[10px] font-semibold tracking-tight transition-colors sm:text-[11px]",
+                    isActive ? "bg-graphite-900/90 text-white" : "text-graphite-300",
+                  )}
+                >
+                  {node.name}
                 </span>
               </span>
             </motion.button>
@@ -138,10 +151,20 @@ export function EcosystemOrbit() {
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-white">{activeNode.name}</h3>
-              <p className="mt-1 text-sm font-medium text-accent">{activeNode.role}</p>
-              <p className="mt-3 text-sm leading-relaxed text-graphite-200">
-                {activeNode.description}
+              <p className="mt-1 text-sm font-medium text-accent">
+                {content.nodes[activeNode.id]?.role ?? activeNode.role}
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-graphite-200">
+                {content.nodes[activeNode.id]?.description ?? activeNode.description}
+              </p>
+              {content.nodes[activeNode.id]?.output ? (
+                <p className="mt-3 rounded-lg border border-white/10 bg-black/30 p-3 text-xs leading-relaxed text-graphite-300">
+                  <span className="font-mono uppercase tracking-widest text-accent/80">
+                    {content.global.output}:{" "}
+                  </span>
+                  {content.nodes[activeNode.id].output}
+                </p>
+              ) : null}
               <Link
                 href={activeNode.route}
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"

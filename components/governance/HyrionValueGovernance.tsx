@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
+import { Disclaimer } from "@/components/Disclaimer";
 import type { GovernanceStatus } from "@/types";
 
 /**
@@ -73,6 +74,8 @@ export function HyrionValueGovernance() {
           </div>
         ))}
       </div>
+
+      <Disclaimer className="mt-5" variant="compact" />
     </div>
   );
 }

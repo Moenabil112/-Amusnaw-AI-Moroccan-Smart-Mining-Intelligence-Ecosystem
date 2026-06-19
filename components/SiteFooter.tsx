@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 import { LogoBlock } from "./LogoBlock";
 import { Disclaimer } from "./Disclaimer";
+import { ThemeTokenProvider } from "./ThemeTokenProvider";
+import { EcosystemSignalCards } from "./ecosystem/EcosystemSignalCards";
 
 /** SiteFooter — main ecosystem sentence + required disclaimer + route index. */
 export function SiteFooter() {
@@ -20,10 +22,10 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Required main ecosystem sentence */}
-        <p className="max-w-4xl text-pretty text-sm leading-relaxed text-graphite-200">
-          {content.global.ecosystemSentence}
-        </p>
+        {/* Main ecosystem narrative — split into short cards, not a paragraph */}
+        <ThemeTokenProvider theme="amusnaw">
+          <EcosystemSignalCards />
+        </ThemeTokenProvider>
 
         <nav aria-label="All windows" className="mt-8 flex flex-wrap gap-x-5 gap-y-2">
           {content.nav.items.map((item) => (

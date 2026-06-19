@@ -3,9 +3,24 @@
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-/** Required global financial disclaimer. Reused on value-bearing windows. */
-export function Disclaimer({ className }: { className?: string }) {
+/**
+ * Required financial disclaimer.
+ * - `variant="full"` (default): the complete global disclaimer (footer).
+ * - `variant="compact"`: the shorter wording for value-bearing windows
+ *   (Market Value Board, HYRION) so it stays visible without dominating.
+ */
+export function Disclaimer({
+  className,
+  variant = "full",
+}: {
+  className?: string;
+  variant?: "full" | "compact";
+}) {
   const { content } = useI18n();
+  const text =
+    variant === "compact"
+      ? content.global.disclaimerCompact
+      : content.global.disclaimer;
   return (
     <div
       role="note"
@@ -18,7 +33,7 @@ export function Disclaimer({ className }: { className?: string }) {
         <span aria-hidden className="mt-0.5 shrink-0 text-accent">
           ⚠
         </span>
-        <span>{content.global.disclaimer}</span>
+        <span>{text}</span>
       </p>
     </div>
   );

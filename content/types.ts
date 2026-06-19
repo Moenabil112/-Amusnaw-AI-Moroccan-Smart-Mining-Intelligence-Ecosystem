@@ -17,11 +17,43 @@ export interface WindowCopy {
   message?: string;
 }
 
+/** Institutional copy for a single ecosystem layer node. */
+export interface NodeCopy {
+  role: string;
+  description: string;
+  output: string;
+}
+
+/** One line of the split signal-to-decision narrative. */
+export interface EcosystemLine {
+  code: string;
+  line: string;
+}
+
+/** Expanded "/ecosystem" institutional explanation page (A–G structure). */
+export interface EcosystemPageCopy {
+  intro: {
+    eyebrow: string;
+    whatIsTitle: string;
+    whatIs: string;
+    whyTitle: string;
+    why: string;
+  };
+  map: { title: string; subtitle: string };
+  workflow: { title: string; subtitle: string };
+  mineralScope: { title: string; intro: string; families: string[]; note: string };
+  valueGovernance: { title: string; copy: string };
+  relevance: { title: string; subtitle: string };
+  cta: { title: string; actions: { label: string; href: string }[] };
+}
+
 export interface SiteContent {
   meta: {
     name: string;
     tagline: string;
     description: string;
+    /** Opening institutional definition of Amusnaw AI. */
+    definition: string;
   };
   nav: {
     brand: string;
@@ -37,13 +69,22 @@ export interface SiteContent {
   global: {
     ecosystemSentence: string;
     disclaimer: string;
+    /** Compact disclaimer for value-bearing windows (Market Value, HYRION). */
+    disclaimerCompact: string;
     notAssetValuation: string;
     poweredByHyrion: string;
     explore: string;
+    output: string;
     role: string;
     learnMore: string;
     backToEcosystem: string;
   };
+  /** Per-layer institutional copy keyed by node id (qassas, aguelmous, …). */
+  nodes: Record<string, NodeCopy>;
+  /** The split signal-to-decision narrative (7 short lines). */
+  ecosystemLines: EcosystemLine[];
+  /** Expanded "/ecosystem" institutional explanation page. */
+  ecosystemPage: EcosystemPageCopy;
   governanceLabels: Record<GovernanceStatus, string>;
   evidenceLabels: Record<EvidenceStatus, string>;
   accessLabels: Record<DataRoomAccess, string>;

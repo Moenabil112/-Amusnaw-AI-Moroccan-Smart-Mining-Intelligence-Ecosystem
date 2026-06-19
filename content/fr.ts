@@ -7,6 +7,8 @@ export const fr: SiteContent = {
     tagline: "Écosystème marocain d'intelligence minière intelligente",
     description:
       "Une fenêtre numérique structurée pour l'intelligence minière, la gouvernance et la décision stratégique.",
+    definition:
+      "Amusnaw AI est un écosystème marocain d'intelligence minière qui relie les signaux géologiques, les preuves de terrain, les références de valeur minérale et la gouvernance institutionnelle dans une seule interface décisionnelle.",
   },
   nav: {
     brand: "Amusnaw AI",
@@ -38,12 +40,123 @@ export const fr: SiteContent = {
       "QASSAS génère l'intelligence d'exploration. Aguelmous démontre la R&D marocaine sur les failles intelligentes. Isseksi prouve la maturité de terrain et industrielle. HYRION gouverne les preuves et la logique de valeur. ZYNTRA active la pile technologique. AKANIL encadre la passerelle institutionnelle. Amusnaw AI les relie en un seul écosystème marocain d'intelligence minière.",
     disclaimer:
       "Tous les prix des minéraux et indicateurs de valeur sont uniquement des références de marché indicatives. Ils ne représentent ni une évaluation de réserves, ni une évaluation d'actifs, ni des revenus, ni un rendement d'investissement. Tout scénario de valeur requiert un tonnage, une teneur, une récupération, des facteurs de paiement, des CAPEX/OPEX, un statut légal vérifiés et la gouvernance des preuves HYRION.",
+    disclaimerCompact:
+      "Les références de marché ne sont pas des évaluations d'actifs. Tout scénario de valeur requiert un tonnage, une teneur, une récupération, des facteurs payables, une modélisation des coûts, un statut légal vérifiés et la gouvernance des preuves HYRION.",
     notAssetValuation: "Référence de marché indicative — pas une évaluation d'actifs.",
     poweredByHyrion: "Propulsé par HYRION",
     explore: "Ouvrir la fenêtre",
+    output: "Production",
     role: "Rôle",
     learnMore: "En savoir plus",
     backToEcosystem: "Retour à l'écosystème",
+  },
+  nodes: {
+    qassas: {
+      role: "Moteur d'intelligence d'exploration",
+      description:
+        "Génère l'intelligence d'exploration à partir du contexte géologique, de l'imagerie satellite, du terrain, des réseaux de drainage, des indicateurs de failles, des observations de terrain et du savoir des experts.",
+      output:
+        "Scores de cibles, itinéraires de levés, couches de signal minéral et plans de validation de terrain.",
+    },
+    aguelmous: {
+      role: "Démonstrateur R&D d'exploration des failles intelligentes",
+      description:
+        "Teste comment la géologie marocaine contrôlée par les failles peut être transformée en cibles d'exploration assistées par IA à pertinence de marché mesurable.",
+      output:
+        "Modèles de failles, couches de terrain, hypothèses de cibles IA et portes de décision R&D.",
+    },
+    isseksi: {
+      role: "Produit prêt d'intelligence minière et de gouvernance",
+      description:
+        "Fournit la couche de preuve de terrain et industrielle pour l'intelligence du cuivre, la logique de traitement mobile, les scénarios de cuivre cément, le suivi ESG et les portes de validation.",
+      output:
+        "Preuves de terrain, logique de produit cuivre, hypothèses de traitement et preuve prête pour la gouvernance.",
+    },
+    hyrion: {
+      role: "Couche de contrôle de gouvernance, des preuves et de la confiance",
+      description:
+        "Contrôle la manière dont les preuves, les références de marché, les analyses, le contexte de licence, le statut de validation et les permissions d'accès sont gouvernés avant l'examen institutionnel.",
+      output:
+        "Index des preuves, contrôle d'accès, statut de gouvernance de valeur, piste d'audit et notes de décision.",
+    },
+    zyntra: {
+      role: "Couche d'activation technologique et IA",
+      description:
+        "Fournit la pile technique nécessaire pour exploiter l'écosystème via des modèles IA, des interfaces géospatiales, des pipelines de données sécurisés, la préparation RAG, des API et des systèmes d'interface évolutifs.",
+      output:
+        "Interfaces IA, pipelines de données, architecture sécurisée et couches d'automatisation.",
+    },
+    akanil: {
+      role: "Initiateur stratégique et passerelle institutionnelle",
+      description:
+        "Encadre l'écosystème de manière institutionnelle et relie le positionnement marocain, l'intelligence de terrain africaine, la structuration des partenaires et la logique d'entrée stratégique.",
+      output:
+        "Récit institutionnel, structure d'accès des partenaires, logique de corridor et cadrage de gouvernance.",
+    },
+  },
+  ecosystemLines: [
+    { code: "QASSAS", line: "QASSAS lit le terrain." },
+    { code: "Aguelmous", line: "Aguelmous teste la frontière R&D." },
+    { code: "Isseksi", line: "Isseksi prouve le produit de terrain." },
+    { code: "HYRION", line: "HYRION gouverne les preuves et la valeur." },
+    { code: "ZYNTRA", line: "ZYNTRA active la pile technologique." },
+    { code: "AKANIL", line: "AKANIL encadre l'entrée institutionnelle." },
+    {
+      code: "Amusnaw AI",
+      line: "Amusnaw AI relie le système en une couche marocaine d'intelligence minérale.",
+    },
+  ],
+  ecosystemPage: {
+    intro: {
+      eyebrow: "Vue institutionnelle",
+      whatIsTitle: "Qu'est-ce qu'Amusnaw AI ?",
+      whatIs:
+        "Amusnaw AI est un écosystème marocain d'intelligence minière qui relie les signaux géologiques, les preuves de terrain, les références de valeur minérale et la gouvernance institutionnelle dans une seule interface décisionnelle.",
+      whyTitle: "Pourquoi le Maroc a besoin de cet écosystème",
+      why: "Les preuves minérales au Maroc sont dispersées entre la géologie, le travail de terrain, les laboratoires et les dossiers institutionnels. Amusnaw AI structure ces preuves pour passer des signaux d'exploration bruts à des décisions institutionnelles gouvernées — de manière responsable et sans affirmations de valeur exagérées.",
+    },
+    map: {
+      title: "Quelles sont les couches de l'écosystème et comment travaillent-elles ensemble ?",
+      subtitle:
+        "Six couches spécialisées travaillent ensemble pour faire passer les opportunités minérales des signaux d'exploration aux décisions institutionnelles gouvernées.",
+    },
+    workflow: {
+      title: "Comment l'écosystème passe du signal à la décision",
+      subtitle:
+        "Chaque couche transmet sa production à la suivante, jusqu'à une couche de décision institutionnelle marocaine.",
+    },
+    mineralScope: {
+      title: "Périmètre minéral géré par l'écosystème",
+      intro:
+        "L'écosystème est conçu pour structurer l'intelligence autour des minéraux importants pour l'électrification, les chaînes d'approvisionnement des VE, les data centers IA, la résilience industrielle et les chaînes de valeur stratégiques marocaines.",
+      families: [
+        "Cuivre et métaux de base",
+        "Or et métaux précieux",
+        "Métaux de batterie",
+        "Terres rares et métaux d'aimant",
+        "Phosphate et minéraux stratégiques marocains",
+        "Minéraux industriels et indicateurs liés au terrain",
+      ],
+      note: "Affiché comme périmètre de référence de marché uniquement. Les valeurs détaillées relèvent du Tableau de valeur de marché.",
+    },
+    valueGovernance: {
+      title: "La valeur est gouvernée avant d'être présentée",
+      copy: "Un prix de marché ne constitue pas une valorisation d'actif. HYRION distingue les références de marché des preuves vérifiées, des analyses, du modèle de ressource, des hypothèses de récupération, des coûts et de la préparation à la décision.",
+    },
+    relevance: {
+      title: "Ce que chaque institution doit comprendre",
+      subtitle:
+        "L'écosystème est conçu pour un examen institutionnel sérieux — pas pour une levée de fonds ou une promotion.",
+    },
+    cta: {
+      title: "Entrer dans l'écosystème",
+      actions: [
+        { label: "Explorer l'Univers minéral", href: "/minerals" },
+        { label: "Ouvrir la gouvernance HYRION", href: "/hyrion" },
+        { label: "Accéder à la salle de données", href: "/data-room" },
+        { label: "Demander un accès stratégique", href: "/strategic-entry" },
+      ],
+    },
   },
   governanceLabels: {
     marketReference: "Référence de marché",
@@ -90,10 +203,10 @@ export const fr: SiteContent = {
     },
     ecosystem: {
       id: "01",
-      question: "Quels sont les composants de l'écosystème, et qui fait quoi ?",
+      question: "Quelles sont les couches de l'écosystème et comment travaillent-elles ensemble ?",
       title: "Carte de l'écosystème",
       answer:
-        "Six couches spécialisées orbitent autour d'un hub central. Survolez un nœud pour révéler son rôle et ses connexions.",
+        "Amusnaw AI relie six couches complémentaires. Chaque couche a une responsabilité spécifique : générer l'intelligence d'exploration, tester la logique R&D, prouver la maturité de terrain, gouverner les preuves, activer la technologie et encadrer l'entrée institutionnelle.",
     },
     problem: {
       id: "02",
@@ -286,13 +399,13 @@ export const fr: SiteContent = {
       message:
         "Ce n'est pas une collection de projets déconnectés. C'est un écosystème séquencé de l'intelligence à la gouvernance.",
       steps: [
-        { code: "QASSAS", action: "génère l'intelligence d'exploration" },
+        { code: "QASSAS", action: "identifie les signaux d'exploration" },
         { code: "Aguelmous", action: "teste la logique R&D des failles intelligentes" },
         { code: "Isseksi", action: "prouve la maturité de terrain et industrielle" },
-        { code: "HYRION", action: "gouverne les preuves, références de valeur et accès" },
-        { code: "ZYNTRA", action: "active les interfaces techniques et systèmes IA" },
-        { code: "AKANIL", action: "encadre l'entrée institutionnelle" },
-        { code: "Amusnaw AI", action: "présente la couche de décision stratégique marocaine" },
+        { code: "HYRION", action: "gouverne les preuves et la logique de valeur" },
+        { code: "ZYNTRA", action: "active la pile technologique" },
+        { code: "AKANIL", action: "encadre la passerelle institutionnelle" },
+        { code: "Amusnaw AI", action: "présente la couche de décision marocaine finale" },
       ],
     },
     matrix: {

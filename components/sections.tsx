@@ -4,7 +4,9 @@ import { useI18n } from "@/lib/i18n";
 import { EcosystemWindow } from "@/components/windows/EcosystemWindow";
 import { KineticGridHero } from "@/components/ecosystem/KineticGridHero";
 import { EcosystemOrbit } from "@/components/ecosystem/EcosystemOrbit";
+import { EcosystemSignalCards } from "@/components/ecosystem/EcosystemSignalCards";
 import { ProblemFlow } from "@/components/ecosystem/ProblemFlow";
+import { Eyebrow } from "@/components/ui";
 import { IntegratedWorkflow } from "@/components/ecosystem/IntegratedWorkflow";
 import { MineralUniverse } from "@/components/minerals/MineralUniverse";
 import { MarketValueBoard } from "@/components/minerals/MarketValueBoard";
@@ -36,6 +38,10 @@ export function EcosystemSection({ full = true }: SectionProps) {
   return (
     <EcosystemWindow theme="amusnaw" copy={content.windows.ecosystem} fullScreen={full} anchorId="ecosystem">
       <EcosystemOrbit />
+      <div className="mt-10">
+        <Eyebrow>How the ecosystem moves from signal to decision</Eyebrow>
+        <EcosystemSignalCards />
+      </div>
     </EcosystemWindow>
   );
 }

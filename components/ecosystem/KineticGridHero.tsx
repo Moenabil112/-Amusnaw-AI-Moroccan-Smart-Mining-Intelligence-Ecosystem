@@ -72,7 +72,7 @@ export function KineticGridHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-graphite-200 sm:text-lg"
           >
-            {w.message}
+            {content.meta.definition}
           </motion.p>
 
           <motion.div

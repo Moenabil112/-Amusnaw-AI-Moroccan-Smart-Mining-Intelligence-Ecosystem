@@ -27,7 +27,7 @@ export function MarketValueBoard() {
         ))}
       </div>
 
-      <Disclaimer className="mt-6" />
+      <Disclaimer className="mt-6" variant="compact" />
     </div>
   );
 }
