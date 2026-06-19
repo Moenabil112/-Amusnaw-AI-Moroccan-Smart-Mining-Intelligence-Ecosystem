@@ -91,6 +91,7 @@ export const fr: SiteContent = {
         "Génère l'intelligence d'exploration à partir du contexte géologique, de l'imagerie satellite, du terrain, des réseaux de drainage, des indicateurs de failles, des observations de terrain et du savoir des experts.",
       output:
         "Scores de cibles, itinéraires de levés, couches de signal minéral et plans de validation de terrain.",
+      short: "Lit les signaux géologiques et génère l'intelligence des cibles.",
     },
     aguelmous: {
       role: "Démonstrateur R&D d'exploration des failles intelligentes",
@@ -98,6 +99,7 @@ export const fr: SiteContent = {
         "Teste comment la géologie marocaine contrôlée par les failles peut être transformée en cibles d'exploration assistées par IA à pertinence de marché mesurable.",
       output:
         "Modèles de failles, couches de terrain, hypothèses de cibles IA et portes de décision R&D.",
+      short: "Teste la logique d'exploration marocaine contrôlée par les failles.",
     },
     isseksi: {
       role: "Produit prêt d'intelligence minière et de gouvernance",
@@ -105,6 +107,7 @@ export const fr: SiteContent = {
         "Fournit la couche de preuve de terrain et industrielle pour l'intelligence du cuivre, la logique de traitement mobile, les scénarios de cuivre cément, le suivi ESG et les portes de validation.",
       output:
         "Preuves de terrain, logique de produit cuivre, hypothèses de traitement et preuve prête pour la gouvernance.",
+      short: "Prouve la maturité de terrain et industrielle via l'intelligence du cuivre.",
     },
     hyrion: {
       role: "Couche de contrôle de gouvernance, des preuves et de la confiance",
@@ -112,6 +115,7 @@ export const fr: SiteContent = {
         "Contrôle la manière dont les preuves, les références de marché, les analyses, le contexte de licence, le statut de validation et les permissions d'accès sont gouvernés avant l'examen institutionnel.",
       output:
         "Index des preuves, contrôle d'accès, statut de gouvernance de valeur, piste d'audit et notes de décision.",
+      short: "Contrôle les preuves, l'accès, la logique de valeur et la préparation à la décision.",
     },
     zyntra: {
       role: "Couche d'activation technologique et IA",
@@ -119,6 +123,7 @@ export const fr: SiteContent = {
         "Fournit la pile technique nécessaire pour exploiter l'écosystème via des modèles IA, des interfaces géospatiales, des pipelines de données sécurisés, la préparation RAG, des API et des systèmes d'interface évolutifs.",
       output:
         "Interfaces IA, pipelines de données, architecture sécurisée et couches d'automatisation.",
+      short: "Active les modèles IA, interfaces géospatiales, API et systèmes de données sécurisés.",
     },
     akanil: {
       role: "Initiateur stratégique et passerelle institutionnelle",
@@ -126,6 +131,7 @@ export const fr: SiteContent = {
         "Encadre l'écosystème de manière institutionnelle et relie le positionnement marocain, l'intelligence de terrain africaine, la structuration des partenaires et la logique d'entrée stratégique.",
       output:
         "Récit institutionnel, structure d'accès des partenaires, logique de corridor et cadrage de gouvernance.",
+      short: "Encadre l'écosystème pour l'entrée institutionnelle marocaine et le partenariat.",
     },
   },
   ecosystemLines: [
@@ -141,18 +147,27 @@ export const fr: SiteContent = {
     },
   ],
   ecosystemPage: {
-    intro: {
-      eyebrow: "Vue institutionnelle",
-      whatIsTitle: "Qu'est-ce qu'Amusnaw AI ?",
-      whatIs:
+    positioning: {
+      eyebrow: "Positionnement exécutif",
+      definition:
         "Amusnaw AI est un écosystème marocain d'intelligence minière qui relie les signaux géologiques, les preuves de terrain, les références de valeur minérale et la gouvernance institutionnelle dans une seule interface décisionnelle.",
-      whyTitle: "Pourquoi le Maroc a besoin de cet écosystème",
-      why: "Les preuves minérales au Maroc sont dispersées entre la géologie, le travail de terrain, les laboratoires et les dossiers institutionnels. Amusnaw AI structure ces preuves pour passer des signaux d'exploration bruts à des décisions institutionnelles gouvernées — de manière responsable et sans affirmations de valeur exagérées.",
+      supporting:
+        "L'écosystème ne présente pas des projets séparés, mais des couches opérationnelles qui transforment un signal géologique en décision institutionnelle vérifiable.",
+      whatLabel: "Ce que c'est",
+      whatValue: "Un écosystème marocain d'intelligence minière intelligente.",
+      doesLabel: "Ce que ça fait",
+      doesValue:
+        "Convertit les signaux géologiques, les preuves de terrain, les références de valeur minérale et les registres de gouvernance en intelligence minière prête pour la décision.",
+      whyLabel: "Pourquoi c'est important",
+      whyValue:
+        "Crée une couche nationale de données et de gouvernance minérales pour les minéraux stratégiques, les chaînes d'approvisionnement des VE, les data centers IA et la résilience industrielle.",
     },
     map: {
-      title: "Quelles sont les couches de l'écosystème et comment travaillent-elles ensemble ?",
+      title: "Quelles sont les couches de l'écosystème ?",
       subtitle:
-        "Six couches spécialisées travaillent ensemble pour faire passer les opportunités minérales des signaux d'exploration aux décisions institutionnelles gouvernées.",
+        "Six couches opérationnelles font passer les opportunités minérales du signal géologique à la décision institutionnelle gouvernée.",
+      connect:
+        "Amusnaw AI relie ces couches en une seule couche marocaine d'intelligence minérale.",
     },
     workflow: {
       title: "Comment l'écosystème passe du signal à la décision",
@@ -161,32 +176,45 @@ export const fr: SiteContent = {
     },
     mineralScope: {
       title: "Périmètre minéral géré par l'écosystème",
-      intro:
-        "L'écosystème est conçu pour structurer l'intelligence autour des minéraux importants pour l'électrification, les chaînes d'approvisionnement des VE, les data centers IA, la résilience industrielle et les chaînes de valeur stratégiques marocaines.",
-      families: [
-        "Cuivre et métaux de base",
-        "Or et métaux précieux",
-        "Métaux de batterie",
-        "Terres rares et métaux d'aimant",
-        "Phosphate et minéraux stratégiques marocains",
-        "Minéraux industriels et indicateurs liés au terrain",
-      ],
-      note: "Affiché comme périmètre de référence de marché uniquement. Les valeurs détaillées relèvent du Tableau de valeur de marché.",
+      coverageBadge: "Couche de couverture — pas une affirmation de réserves",
+      explanation:
+        "Les minéraux listés ici représentent une couverture d'intelligence et un périmètre de ciblage stratégique. Ils n'impliquent ni réserves vérifiées, ni droits de production, ni valorisation d'actifs.",
+      linkageNote:
+        "Les références de marché détaillées relèvent du Tableau de valeur de marché. Les preuves et l'interprétation de la valeur restent gouvernées par HYRION.",
     },
     valueGovernance: {
       title: "La valeur est gouvernée avant d'être présentée",
-      copy: "Un prix de marché ne constitue pas une valorisation d'actif. HYRION distingue les références de marché des preuves vérifiées, des analyses, du modèle de ressource, des hypothèses de récupération, des coûts et de la préparation à la décision.",
+      copy: "Un prix de marché ne constitue pas une valorisation d'actif. HYRION distingue les références de marché des preuves vérifiées, des analyses, du modèle de ressource, des hypothèses de récupération, des coûts, du statut légal et de la préparation à la décision.",
+      groups: [
+        {
+          title: "Couche marché",
+          items: ["Référence de marché", "Unité de référence", "Source requise"],
+        },
+        {
+          title: "Couche preuves",
+          items: ["Lié aux preuves", "Soutenu par analyses", "Contexte de licence"],
+        },
+        {
+          title: "Couche technique",
+          items: ["Modèle de ressources en attente", "Récupération en attente", "Modèle de coûts en attente"],
+        },
+        {
+          title: "Couche décision",
+          items: ["Pas une évaluation de réserves", "Examen restreint", "Prêt pour décision"],
+        },
+      ],
     },
     relevance: {
-      title: "Ce que chaque institution doit comprendre",
+      title: "Pourquoi cela compte pour les institutions et partenaires marocains",
       subtitle:
         "L'écosystème est conçu pour un examen institutionnel sérieux — pas pour une levée de fonds ou une promotion.",
     },
     cta: {
-      title: "Entrer dans l'écosystème",
+      title: "Où aller ensuite",
       actions: [
         { label: "Explorer l'Univers minéral", href: "/minerals" },
-        { label: "Ouvrir la gouvernance HYRION", href: "/hyrion" },
+        { label: "Ouvrir le Tableau de valeur", href: "/market-value" },
+        { label: "Voir la gouvernance HYRION", href: "/hyrion" },
         { label: "Accéder à la salle de données", href: "/data-room" },
         { label: "Demander un accès stratégique", href: "/strategic-entry" },
       ],

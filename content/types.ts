@@ -22,6 +22,8 @@ export interface NodeCopy {
   role: string;
   description: string;
   output: string;
+  /** One concise line for the executive layer map on /ecosystem. */
+  short: string;
 }
 
 /** One line of the split signal-to-decision narrative. */
@@ -32,17 +34,31 @@ export interface EcosystemLine {
 
 /** Expanded "/ecosystem" institutional explanation page (A–G structure). */
 export interface EcosystemPageCopy {
-  intro: {
+  /** A — Executive positioning card. */
+  positioning: {
     eyebrow: string;
-    whatIsTitle: string;
-    whatIs: string;
-    whyTitle: string;
-    why: string;
+    definition: string;
+    supporting: string;
+    whatLabel: string;
+    whatValue: string;
+    doesLabel: string;
+    doesValue: string;
+    whyLabel: string;
+    whyValue: string;
   };
-  map: { title: string; subtitle: string };
+  map: { title: string; subtitle: string; connect: string };
   workflow: { title: string; subtitle: string };
-  mineralScope: { title: string; intro: string; families: string[]; note: string };
-  valueGovernance: { title: string; copy: string };
+  mineralScope: {
+    title: string;
+    coverageBadge: string;
+    explanation: string;
+    linkageNote: string;
+  };
+  valueGovernance: {
+    title: string;
+    copy: string;
+    groups: { title: string; items: string[] }[];
+  };
   relevance: { title: string; subtitle: string };
   cta: { title: string; actions: { label: string; href: string }[] };
 }

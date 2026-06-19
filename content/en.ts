@@ -91,6 +91,7 @@ export const en: SiteContent = {
         "Generates exploration intelligence from geological context, satellite imagery, terrain, drainage systems, fault indicators, field observations, and expert knowledge.",
       output:
         "Target scores, survey routes, mineral signal layers, and field validation plans.",
+      short: "Reads geological signals and generates target intelligence.",
     },
     aguelmous: {
       role: "Smart Fault Exploration R&D Demonstrator",
@@ -98,6 +99,7 @@ export const en: SiteContent = {
         "Tests how Moroccan fault-controlled geology can be transformed into AI-assisted exploration targets with measurable market relevance.",
       output:
         "Fault models, terrain layers, AI target hypotheses, and R&D decision gates.",
+      short: "Tests Moroccan fault-controlled exploration logic.",
     },
     isseksi: {
       role: "Ready Mining Intelligence & Governance Product",
@@ -105,6 +107,7 @@ export const en: SiteContent = {
         "Provides the field and industrial proof layer for copper intelligence, mobile processing logic, cement copper scenarios, ESG monitoring, and validation gates.",
       output:
         "Field evidence, copper product logic, processing assumptions, and governance-ready proof.",
+      short: "Proves field and industrial readiness through copper intelligence.",
     },
     hyrion: {
       role: "Governance, Evidence & Trust Control Layer",
@@ -112,6 +115,7 @@ export const en: SiteContent = {
         "Controls how evidence, market references, assays, license context, validation status, and access permissions are governed before institutional review.",
       output:
         "Evidence index, access control, value-governance status, audit trail, and decision memos.",
+      short: "Controls evidence, access, value logic, and decision readiness.",
     },
     zyntra: {
       role: "Technology & AI Enablement Layer",
@@ -119,6 +123,7 @@ export const en: SiteContent = {
         "Provides the technical stack required to operate the ecosystem through AI models, geospatial interfaces, secure data pipelines, RAG readiness, APIs, and scalable UI systems.",
       output:
         "AI interfaces, data pipelines, secure architecture, and automation layers.",
+      short: "Enables AI models, geospatial interfaces, APIs, and secure data systems.",
     },
     akanil: {
       role: "Strategic Originator & Institutional Gateway",
@@ -126,6 +131,7 @@ export const en: SiteContent = {
         "Frames the ecosystem institutionally and connects Moroccan positioning, African field intelligence, partner structuring, and strategic entry logic.",
       output:
         "Institutional narrative, partner access structure, corridor logic, and governance framing.",
+      short: "Frames the ecosystem for Moroccan institutional entry and partnership.",
     },
   },
   ecosystemLines: [
@@ -141,18 +147,27 @@ export const en: SiteContent = {
     },
   ],
   ecosystemPage: {
-    intro: {
-      eyebrow: "Institutional overview",
-      whatIsTitle: "What is Amusnaw AI?",
-      whatIs:
+    positioning: {
+      eyebrow: "Executive positioning",
+      definition:
         "Amusnaw AI is a Moroccan institutional intelligence ecosystem that converts geological signals, field evidence, mineral value references, and governance records into decision-ready mining intelligence.",
-      whyTitle: "Why Morocco needs this ecosystem",
-      why: "Mineral evidence in Morocco is scattered across geology, field work, laboratories, and institutional files. Amusnaw AI structures that evidence so the country can move from raw exploration signals to governed institutional decisions — responsibly, and without exaggerated value claims.",
+      supporting:
+        "It is not a portfolio of disconnected projects. It is a sequenced intelligence-to-governance system.",
+      whatLabel: "What it is",
+      whatValue: "A Moroccan smart mining intelligence ecosystem.",
+      doesLabel: "What it does",
+      doesValue:
+        "Converts geological signals, field evidence, mineral value references, and governance records into decision-ready mining intelligence.",
+      whyLabel: "Why it matters",
+      whyValue:
+        "It creates a national-ready mineral data and governance layer for strategic minerals, EV supply chains, AI data centers, and industrial resilience.",
     },
     map: {
-      title: "What are the layers of the ecosystem, and how do they work together?",
+      title: "What are the layers of the ecosystem?",
       subtitle:
-        "Six specialized layers work together to move mineral opportunities from exploration signals to governed institutional decisions.",
+        "Six operational layers move mineral opportunities from geological signal to governed institutional decision.",
+      connect:
+        "Amusnaw AI connects these layers into one Moroccan mineral intelligence layer.",
     },
     workflow: {
       title: "How the ecosystem moves from signal to decision",
@@ -161,32 +176,45 @@ export const en: SiteContent = {
     },
     mineralScope: {
       title: "Mineral Scope Managed by the Ecosystem",
-      intro:
-        "The ecosystem is designed to structure intelligence around minerals that matter for electrification, EV supply chains, AI data centers, industrial resilience, and Moroccan strategic value chains.",
-      families: [
-        "Copper and base metals",
-        "Gold and precious metals",
-        "Battery metals",
-        "Rare earth and magnet metals",
-        "Phosphate and Moroccan strategic minerals",
-        "Industrial minerals and field-linked indicators",
-      ],
-      note: "Shown as market-reference scope only. Detailed market values belong to the Market Value Board.",
+      coverageBadge: "Coverage Layer — Not Reserve Claim",
+      explanation:
+        "The minerals listed here represent intelligence coverage and strategic targeting scope. They do not imply verified reserves, production rights, or asset valuation.",
+      linkageNote:
+        "Detailed market references belong to the Market Value Board. Evidence and value interpretation remain governed by HYRION.",
     },
     valueGovernance: {
       title: "Value is governed before it is presented",
-      copy: "Market prices alone do not define asset value. HYRION separates commodity benchmarks from verified evidence, assay support, resource modeling, recovery assumptions, cost models, and legal validation.",
+      copy: "Market prices alone do not define asset value. HYRION separates commodity benchmarks from verified evidence, assay support, resource modeling, recovery assumptions, cost models, legal status, and decision readiness.",
+      groups: [
+        {
+          title: "Market Layer",
+          items: ["Market Reference", "Benchmark Unit", "Source Required"],
+        },
+        {
+          title: "Evidence Layer",
+          items: ["Evidence Linked", "Assay Supported", "License Context"],
+        },
+        {
+          title: "Technical Layer",
+          items: ["Resource Model Pending", "Recovery Pending", "Cost Model Pending"],
+        },
+        {
+          title: "Decision Layer",
+          items: ["Not Reserve Valuation", "Restricted Review", "Decision-Ready"],
+        },
+      ],
     },
     relevance: {
-      title: "What each institution should understand",
+      title: "Why this matters to Moroccan institutions and partners",
       subtitle:
         "The ecosystem is built for serious institutional review — not for fundraising or promotion.",
     },
     cta: {
-      title: "Enter the ecosystem",
+      title: "Where to go next",
       actions: [
         { label: "Explore Mineral Universe", href: "/minerals" },
-        { label: "Open HYRION Governance", href: "/hyrion" },
+        { label: "Open Market Value Board", href: "/market-value" },
+        { label: "View HYRION Governance", href: "/hyrion" },
         { label: "Access Data Room", href: "/data-room" },
         { label: "Request Strategic Access", href: "/strategic-entry" },
       ],
@@ -489,37 +517,37 @@ export const en: SiteContent = {
       id: "moroccan-institutions",
       label: "Moroccan Institutions",
       answer:
-        "Structured mineral data infrastructure and governance-ready mining intelligence aligned with national strategic priorities.",
+        "Structured mineral data infrastructure and governance-ready mining intelligence for strategic mineral planning.",
     },
     {
       id: "cdg-strategic-capital",
       label: "CDG / Strategic Capital",
       answer:
-        "A co-building window into national mineral data infrastructure — a strategic positioning, not a funding request for an experiment.",
+        "A co-building window into national mineral data infrastructure, not a funding request for an experiment.",
     },
     {
       id: "mining-operators",
       label: "Mining Operators",
       answer:
-        "A method to convert field evidence into operational decisions and governed validation routes.",
+        "A method to convert field evidence into operational decisions and validated work programs.",
     },
     {
       id: "technology-partners",
       label: "Technology Partners",
       answer:
-        "A clear AI, geospatial, RAG, secure interface and data pipeline layer ready for integration.",
+        "A clear AI, geospatial, RAG, secure interface, and data pipeline layer.",
     },
     {
       id: "industrial-partners",
       label: "Industrial Partners",
       answer:
-        "Visibility on minerals relevant to EVs, data centers, electrification, battery chains and strategic manufacturing.",
+        "Visibility on minerals linked to electrification, EV supply chains, data centers, and industrial resilience.",
     },
     {
       id: "governance-partners",
       label: "Governance Partners",
       answer:
-        "HYRION-controlled evidence, access, validation gates and decision records.",
+        "Evidence control, validation gates, access permissions, and decision records governed by HYRION.",
     },
   ],
 };
