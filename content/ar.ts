@@ -50,6 +50,18 @@ export const ar: SiteContent = {
     learnMore: "اعرف المزيد",
     backToEcosystem: "العودة إلى المنظومة",
   },
+  windowStates: {
+    active: "نشط",
+    intelligence: "طبقة الذكاء",
+    rnd: "طبقة البحث والتطوير",
+    evidence: "طبقة الأدلة",
+    governance: "طبقة الحوكمة",
+    technology: "طبقة التمكين",
+    gateway: "طبقة البوابة",
+    marketReference: "مرجع سوقي",
+    strategic: "الدخول الاستراتيجي",
+    restricted: "معاينة مقيّدة",
+  },
   nodes: {
     qassas: {
       role: "محرك ذكاء الاستكشاف",

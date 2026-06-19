@@ -29,6 +29,34 @@ export function HyrionValueGovernance() {
 
   return (
     <div>
+      {/* Control-layer microcopy + state legend */}
+      <div className="mb-5 rounded-xl border border-accent/25 bg-[color:var(--win-accent)]/[0.06] p-4">
+        <p className="text-sm font-medium text-white">
+          HYRION separates commodity benchmark references from verified asset
+          valuation.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+          {[
+            { label: "Pending", color: "#d9bd84" },
+            { label: "Restricted", color: "#e0795b" },
+            { label: "Verified", color: "#7bd88f" },
+            { label: "Review-ready", color: "#3fc7e0" },
+            { label: "Decision-ready", color: "#3fc7e0" },
+          ].map((s) => (
+            <span
+              key={s.label}
+              className="inline-flex items-center gap-1.5 text-[11px] text-graphite-300"
+            >
+              <span
+                className="h-2 w-2 rounded-full"
+                style={{ backgroundColor: s.color }}
+              />
+              {s.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="grid gap-3 sm:grid-cols-2">
         {w.statuses.map((status, i) => {
           const color = TONE[status.key];

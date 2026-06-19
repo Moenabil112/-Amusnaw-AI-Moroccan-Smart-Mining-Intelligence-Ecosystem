@@ -15,6 +15,8 @@ interface WindowFrameProps {
   /** Optional eyebrow above the title, usually the question. */
   question?: string;
   title: string;
+  /** Window state label shown as a status indicator in the header. */
+  state?: string;
   children: React.ReactNode;
   className?: string;
   /** When true the frame stretches to near full-screen (homepage windows). */
@@ -24,8 +26,9 @@ interface WindowFrameProps {
 
 /**
  * WindowFrame — the OS-style window chrome reused by every section.
- * Renders a window header (controls, ID, theme label), a question eyebrow,
- * a title, and the window body. Applies the per-window theme tokens.
+ * Renders a window header (controls, ID, layer label, live status indicator),
+ * a theme accent line, a question eyebrow, a title, and the body. Applies the
+ * per-window theme tokens. Open motion is a controlled scale + fade + rise.
  */
 export function WindowFrame({
   theme,
@@ -33,6 +36,7 @@ export function WindowFrame({
   label,
   question,
   title,
+  state,
   children,
   className,
   fullScreen = false,
@@ -53,17 +57,17 @@ export function WindowFrame({
     >
       {id ? <span id={id} className="absolute -top-20" aria-hidden /> : null}
       <motion.div
-        initial={reduce ? false : { opacity: 0, y: 28 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={reduce ? false : { opacity: 0, y: 28, scale: 0.985 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, margin: "-12% 0px" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-graphite-900/60 shadow-window backdrop-blur-sm",
+          "mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border border-white/10 shadow-window backdrop-blur-md",
         )}
-        style={{ backgroundColor: "color-mix(in srgb, var(--win-base) 82%, transparent)" }}
+        style={{ backgroundColor: "color-mix(in srgb, var(--win-base) 80%, transparent)" }}
       >
         {/* Window header bar */}
-        <div className="flex items-center gap-3 border-b border-white/10 bg-black/30 px-4 py-3 sm:px-6">
+        <div className="flex items-center gap-3 border-b border-white/10 bg-black/40 px-4 py-2.5 sm:px-6">
           <div className="flex items-center gap-1.5" aria-hidden>
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
@@ -72,17 +76,45 @@ export function WindowFrame({
               style={{ backgroundColor: tokens.accent }}
             />
           </div>
-          <div className="flex min-w-0 flex-1 items-center justify-between gap-3">
+          <div className="flex min-w-0 flex-1 items-center justify-between gap-2">
             <span className="truncate font-mono text-[11px] uppercase tracking-[0.2em] text-graphite-300">
               {label ?? tokens.label}
             </span>
-            {windowId ? (
-              <span className="shrink-0 rounded border border-white/10 px-2 py-0.5 font-mono text-[11px] text-accent">
-                WIN_{windowId}
-              </span>
-            ) : null}
+            <div className="flex shrink-0 items-center gap-2">
+              {state ? (
+                <span
+                  className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-graphite-200 sm:inline-flex"
+                  title={state}
+                >
+                  <span
+                    className={cn(
+                      "h-1.5 w-1.5 rounded-full",
+                      reduce ? "" : "animate-pulse-node",
+                    )}
+                    style={{ backgroundColor: tokens.accent }}
+                  />
+                  {state}
+                </span>
+              ) : null}
+              {windowId ? (
+                <span className="rounded border border-white/10 px-2 py-0.5 font-mono text-[11px] text-accent">
+                  WIN_{windowId}
+                </span>
+              ) : null}
+            </div>
           </div>
         </div>
+
+        {/* Theme accent line */}
+        <div
+          className="h-px w-full"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, var(--win-accent), transparent)",
+            opacity: 0.7,
+          }}
+          aria-hidden
+        />
 
         {/* Window body */}
         <div className="relative px-5 py-7 sm:px-8 sm:py-9 lg:px-10">

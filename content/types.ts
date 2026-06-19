@@ -79,6 +79,20 @@ export interface SiteContent {
     learnMore: string;
     backToEcosystem: string;
   };
+  /** Window state labels shown in each window header (status indicator). */
+  windowStates: Record<
+    | "active"
+    | "intelligence"
+    | "rnd"
+    | "evidence"
+    | "governance"
+    | "technology"
+    | "gateway"
+    | "marketReference"
+    | "strategic"
+    | "restricted",
+    string
+  >;
   /** Per-layer institutional copy keyed by node id (qassas, aguelmous, …). */
   nodes: Record<string, NodeCopy>;
   /** The split signal-to-decision narrative (7 short lines). */

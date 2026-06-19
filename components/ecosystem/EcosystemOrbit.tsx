@@ -33,7 +33,10 @@ export function EcosystemOrbit() {
   const activeNode = positioned.find((n) => n.id === active) ?? null;
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+    <div>
+      {/* Desktop / tablet: interactive orbit. Hidden on small screens where the
+          radial layout would crowd labels — replaced by stacked cards below. */}
+      <div className="hidden gap-8 sm:grid lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
       {/* Orbit canvas */}
       <div className="relative mx-auto aspect-square w-full max-w-xl">
         <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden>
@@ -201,6 +204,63 @@ export function EcosystemOrbit() {
               <span className="truncate text-graphite-200">{node.name}</span>
             </button>
           ))}
+        </div>
+      </div>
+      </div>
+
+      {/* Mobile: clean stacked layer cards (no compressed labels) */}
+      <div className="space-y-2.5 sm:hidden">
+        {positioned.map((node) => {
+          const tokens = THEMES[node.theme];
+          const copy = content.nodes[node.id];
+          return (
+            <Link
+              key={`m-${node.id}`}
+              href={node.route}
+              className="block rounded-xl border border-white/10 bg-white/[0.03] p-4"
+            >
+              <div className="flex items-center gap-2.5">
+                <span
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 font-mono text-sm font-semibold"
+                  style={{ color: tokens.accent }}
+                >
+                  {node.name.charAt(0)}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">{node.name}</p>
+                  <p className="text-xs text-accent">{copy?.role ?? node.role}</p>
+                </div>
+              </div>
+              {copy?.output ? (
+                <p className="mt-2.5 text-xs leading-relaxed text-graphite-300">
+                  <span className="font-mono uppercase tracking-widest text-accent/80">
+                    {content.global.output}:{" "}
+                  </span>
+                  {copy.output}
+                </p>
+              ) : null}
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Directional relationship hints (all sizes) */}
+      <div className="mt-6 space-y-2 rounded-xl border border-white/10 bg-black/30 p-4">
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs font-medium text-graphite-200">
+          {["QASSAS", "Aguelmous", "Isseksi", "HYRION", "Amusnaw AI"].map((n, i, arr) => (
+            <span key={n} className="inline-flex items-center gap-1.5">
+              <span className="text-white">{n}</span>
+              {i < arr.length - 1 ? <span className="text-accent">→</span> : null}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-graphite-400">
+          <span>
+            <span className="text-accent">ZYNTRA</span> enables all layers
+          </span>
+          <span>
+            <span className="text-accent">AKANIL</span> frames institutional entry
+          </span>
         </div>
       </div>
     </div>

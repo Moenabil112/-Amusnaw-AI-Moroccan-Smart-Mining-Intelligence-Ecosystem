@@ -5,6 +5,8 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { ThemeTokenProvider } from "@/components/ThemeTokenProvider";
 import { LogoBlock } from "@/components/LogoBlock";
+import { ECOSYSTEM_NODES } from "@/lib/ecosystem";
+import { THEMES } from "@/lib/themes";
 
 /**
  * KineticGridHero — Window 00 hero surface.
@@ -75,23 +77,59 @@ export function KineticGridHero() {
             {content.meta.definition}
           </motion.p>
 
+          {/* Ecosystem layer chips */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.28 }}
+            className="mt-7 flex flex-wrap gap-2"
+            aria-label="Ecosystem layers"
+          >
+            {ECOSYSTEM_NODES.map((node) => (
+              <Link
+                key={node.id}
+                href={node.route}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-graphite-900/60 px-3 py-1.5 text-xs font-medium text-graphite-200 transition-colors hover:border-white/25 hover:text-white"
+              >
+                <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: THEMES[node.theme].accent }}
+                />
+                {node.name}
+              </Link>
+            ))}
+          </motion.div>
+
+          {/* Primary + secondary CTAs */}
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            transition={{ duration: 0.6, delay: 0.36 }}
+            className="mt-7 flex flex-wrap items-center gap-3"
           >
             <Link
-              href="#ecosystem"
+              href="/ecosystem"
               className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-graphite-950 transition-transform hover:-translate-y-0.5"
             >
               {content.nav.enter}
             </Link>
             <Link
-              href="/strategic-entry"
-              className="rounded-lg border border-white/15 px-5 py-3 text-sm font-medium text-white transition-colors hover:border-accent/50"
+              href="/market-value"
+              className="rounded-lg border border-white/15 px-4 py-3 text-sm font-medium text-white transition-colors hover:border-accent/50"
             >
-              {content.windows.strategicEntry.title}
+              {content.windows.marketValue.title}
+            </Link>
+            <Link
+              href="/hyrion"
+              className="rounded-lg border border-white/15 px-4 py-3 text-sm font-medium text-white transition-colors hover:border-accent/50"
+            >
+              {content.windows.hyrion.title}
+            </Link>
+            <Link
+              href="/strategic-entry"
+              className="rounded-lg border border-white/15 px-4 py-3 text-sm font-medium text-white transition-colors hover:border-accent/50"
+            >
+              {content.windows.strategicEntry.submit}
             </Link>
           </motion.div>
         </div>

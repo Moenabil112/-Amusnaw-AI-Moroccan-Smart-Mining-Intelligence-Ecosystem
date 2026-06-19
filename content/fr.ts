@@ -50,6 +50,18 @@ export const fr: SiteContent = {
     learnMore: "En savoir plus",
     backToEcosystem: "Retour à l'écosystème",
   },
+  windowStates: {
+    active: "Actif",
+    intelligence: "Couche d'intelligence",
+    rnd: "Couche R&D",
+    evidence: "Couche de preuves",
+    governance: "Couche de gouvernance",
+    technology: "Couche d'activation",
+    gateway: "Couche passerelle",
+    marketReference: "Référence de marché",
+    strategic: "Entrée stratégique",
+    restricted: "Aperçu restreint",
+  },
   nodes: {
     qassas: {
       role: "Moteur d'intelligence d'exploration",

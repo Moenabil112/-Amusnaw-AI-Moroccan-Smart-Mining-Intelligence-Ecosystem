@@ -21,7 +21,12 @@ export function MineralUniverse() {
   const activeFamily = MINERAL_FAMILIES.find((f) => f.key === active)!;
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+    <div className="space-y-5">
+      <p className="rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-xs text-graphite-400">
+        Mineral scope is an intelligence coverage layer, not a claim of verified
+        reserves.
+      </p>
+      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
       {/* Family selector cluster */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2">
         {MINERAL_FAMILIES.map((family, i) => {
@@ -98,6 +103,7 @@ export function MineralUniverse() {
           </div>
         )}
       </motion.div>
+      </div>
     </div>
   );
 }

@@ -15,10 +15,14 @@ export function MarketValueBoard() {
 
   return (
     <div>
-      <div className="mb-5 rounded-lg border border-amber-400/25 bg-amber-400/[0.06] px-4 py-3">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-400/25 bg-amber-400/[0.06] px-4 py-3">
         <p className="text-sm font-medium text-amber-100">
           {content.global.notAssetValuation}
         </p>
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-amber-100">
+          <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
+          Market Reference — Not Asset Valuation
+        </span>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

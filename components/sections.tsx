@@ -36,7 +36,7 @@ export function BootSection() {
 export function EcosystemSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="amusnaw" copy={content.windows.ecosystem} fullScreen={full} anchorId="ecosystem">
+    <EcosystemWindow theme="amusnaw" copy={content.windows.ecosystem} state={content.windowStates.active} fullScreen={full} anchorId="ecosystem">
       <EcosystemOrbit />
       <div className="mt-10">
         <Eyebrow>How the ecosystem moves from signal to decision</Eyebrow>
@@ -49,7 +49,7 @@ export function EcosystemSection({ full = true }: SectionProps) {
 export function ProblemSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="amusnaw" copy={content.windows.problem} fullScreen={full} anchorId="problem">
+    <EcosystemWindow theme="amusnaw" copy={content.windows.problem} state={content.windowStates.active} fullScreen={full} anchorId="problem">
       <ProblemFlow />
     </EcosystemWindow>
   );
@@ -58,7 +58,7 @@ export function ProblemSection({ full = true }: SectionProps) {
 export function MineralsSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="mineralValue" copy={content.windows.minerals} fullScreen={full} anchorId="minerals">
+    <EcosystemWindow theme="mineralValue" copy={content.windows.minerals} state={content.windowStates.marketReference} fullScreen={full} anchorId="minerals">
       <MineralUniverse />
     </EcosystemWindow>
   );
@@ -67,7 +67,7 @@ export function MineralsSection({ full = true }: SectionProps) {
 export function MarketValueSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="mineralValue" copy={content.windows.marketValue} fullScreen={full} showMessage={false} anchorId="market-value">
+    <EcosystemWindow theme="mineralValue" copy={content.windows.marketValue} state={content.windowStates.marketReference} fullScreen={full} showMessage={false} anchorId="market-value">
       <MarketValueBoard />
     </EcosystemWindow>
   );
@@ -76,7 +76,7 @@ export function MarketValueSection({ full = true }: SectionProps) {
 export function QassasSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="qassas" copy={content.windows.qassas} fullScreen={full} anchorId="qassas">
+    <EcosystemWindow theme="qassas" copy={content.windows.qassas} state={content.windowStates.intelligence} fullScreen={full} anchorId="qassas">
       <QassasEnginePanel />
     </EcosystemWindow>
   );
@@ -85,7 +85,7 @@ export function QassasSection({ full = true }: SectionProps) {
 export function AguelmousSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="aguelmous" copy={content.windows.aguelmous} fullScreen={full} anchorId="aguelmous">
+    <EcosystemWindow theme="aguelmous" copy={content.windows.aguelmous} state={content.windowStates.rnd} fullScreen={full} anchorId="aguelmous">
       <AguelmousFaultMap />
     </EcosystemWindow>
   );
@@ -94,7 +94,7 @@ export function AguelmousSection({ full = true }: SectionProps) {
 export function IsseksiSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="isseksi" copy={content.windows.isseksi} fullScreen={full} showMessage={false} anchorId="isseksi">
+    <EcosystemWindow theme="isseksi" copy={content.windows.isseksi} state={content.windowStates.evidence} fullScreen={full} showMessage={false} anchorId="isseksi">
       <IsseksiCopperValueProduct />
     </EcosystemWindow>
   );
@@ -103,7 +103,7 @@ export function IsseksiSection({ full = true }: SectionProps) {
 export function HyrionSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="hyrion" copy={content.windows.hyrion} fullScreen={full} anchorId="hyrion">
+    <EcosystemWindow theme="hyrion" copy={content.windows.hyrion} state={content.windowStates.governance} fullScreen={full} anchorId="hyrion">
       <HyrionValueGovernance />
     </EcosystemWindow>
   );
@@ -112,7 +112,7 @@ export function HyrionSection({ full = true }: SectionProps) {
 export function ZyntraSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="zyntra" copy={content.windows.zyntra} fullScreen={full} anchorId="zyntra">
+    <EcosystemWindow theme="zyntra" copy={content.windows.zyntra} state={content.windowStates.technology} fullScreen={full} anchorId="zyntra">
       <ZyntraIntelligenceStack />
     </EcosystemWindow>
   );
@@ -121,7 +121,7 @@ export function ZyntraSection({ full = true }: SectionProps) {
 export function AkanilSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="akanil" copy={content.windows.akanil} fullScreen={full} anchorId="akanil">
+    <EcosystemWindow theme="akanil" copy={content.windows.akanil} state={content.windowStates.gateway} fullScreen={full} anchorId="akanil">
       <AkanilGatewayPanel />
     </EcosystemWindow>
   );
@@ -130,7 +130,7 @@ export function AkanilSection({ full = true }: SectionProps) {
 export function WorkflowSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="amusnaw" copy={content.windows.workflow} fullScreen={full} showMessage={false} anchorId="workflow">
+    <EcosystemWindow theme="amusnaw" copy={content.windows.workflow} state={content.windowStates.active} fullScreen={full} showMessage={false} anchorId="workflow">
       <IntegratedWorkflow />
     </EcosystemWindow>
   );
@@ -139,7 +139,7 @@ export function WorkflowSection({ full = true }: SectionProps) {
 export function MatrixSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="mineralValue" copy={content.windows.matrix} fullScreen={full} anchorId="matrix">
+    <EcosystemWindow theme="mineralValue" copy={content.windows.matrix} state={content.windowStates.marketReference} fullScreen={full} anchorId="matrix">
       <StrategicMineralsMatrix />
     </EcosystemWindow>
   );
@@ -148,7 +148,7 @@ export function MatrixSection({ full = true }: SectionProps) {
 export function StakeholdersSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="akanil" copy={content.windows.stakeholders} fullScreen={full} anchorId="stakeholders">
+    <EcosystemWindow theme="akanil" copy={content.windows.stakeholders} state={content.windowStates.active} fullScreen={full} anchorId="stakeholders">
       <StakeholderTabs />
     </EcosystemWindow>
   );
@@ -157,7 +157,7 @@ export function StakeholdersSection({ full = true }: SectionProps) {
 export function DataRoomSection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="dataRoom" copy={content.windows.dataRoom} fullScreen={full} anchorId="data-room">
+    <EcosystemWindow theme="dataRoom" copy={content.windows.dataRoom} state={content.windowStates.restricted} fullScreen={full} anchorId="data-room">
       <SecureDataRoom />
     </EcosystemWindow>
   );
@@ -166,7 +166,7 @@ export function DataRoomSection({ full = true }: SectionProps) {
 export function StrategicEntrySection({ full = true }: SectionProps) {
   const { content } = useI18n();
   return (
-    <EcosystemWindow theme="strategicEntry" copy={content.windows.strategicEntry} fullScreen={full} showMessage={false} anchorId="strategic-entry">
+    <EcosystemWindow theme="strategicEntry" copy={content.windows.strategicEntry} state={content.windowStates.strategic} fullScreen={full} showMessage={false} anchorId="strategic-entry">
       <StrategicEntryForm />
     </EcosystemWindow>
   );

@@ -14,6 +14,7 @@ import { AnswerText, MessageCallout } from "@/components/ui";
 export function EcosystemWindow({
   theme,
   copy,
+  state,
   fullScreen = true,
   showMessage = true,
   children,
@@ -21,6 +22,7 @@ export function EcosystemWindow({
 }: {
   theme: ThemeKey;
   copy: WindowCopy;
+  state?: string;
   fullScreen?: boolean;
   showMessage?: boolean;
   children?: React.ReactNode;
@@ -32,6 +34,7 @@ export function EcosystemWindow({
       windowId={copy.id}
       question={copy.question}
       title={copy.title}
+      state={state}
       fullScreen={fullScreen}
       id={anchorId}
     >

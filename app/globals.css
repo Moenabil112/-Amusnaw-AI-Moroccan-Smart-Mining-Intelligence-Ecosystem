@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* --font-sans / --font-mono are provided by next/font on <html>.
+     Tailwind's fontFamily falls back to system-ui if they are absent. */
   /* Default window theme tokens (Amusnaw) — overridden per window */
   --win-accent: #c8a45c;
   --win-secondary: #1f8a7d;

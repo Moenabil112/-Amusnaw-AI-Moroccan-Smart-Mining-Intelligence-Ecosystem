@@ -50,6 +50,18 @@ export const en: SiteContent = {
     learnMore: "Learn more",
     backToEcosystem: "Back to ecosystem",
   },
+  windowStates: {
+    active: "Active",
+    intelligence: "Intelligence Layer",
+    rnd: "R&D Layer",
+    evidence: "Evidence Layer",
+    governance: "Governance Layer",
+    technology: "Enablement Layer",
+    gateway: "Gateway Layer",
+    marketReference: "Market Reference",
+    strategic: "Strategic Entry",
+    restricted: "Restricted Preview",
+  },
   nodes: {
     qassas: {
       role: "Exploration Intelligence Engine",
