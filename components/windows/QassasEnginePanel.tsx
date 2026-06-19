@@ -15,6 +15,46 @@ export function QassasEnginePanel() {
   const w = content.windows.qassas;
 
   return (
+    <div className="space-y-7">
+      {/* Live targeting data-stream band */}
+      <div className="relative overflow-hidden rounded-xl border border-white/10 bg-graphite-950/70 p-4">
+        <div className="mb-3 flex items-center justify-between">
+          <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite-300">
+            <span
+              className={`h-1.5 w-1.5 rounded-full bg-accent ${reduce ? "" : "animate-pulse-node"}`}
+            />
+            {content.micro.liveFeed}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-accent/80">
+            QASSAS · ENGINE
+          </span>
+        </div>
+        <svg viewBox="0 0 200 44" className="h-14 w-full" aria-hidden>
+          {[8, 18, 28, 38].map((y, row) => (
+            <g key={y}>
+              <line x1="0" y1={y} x2="200" y2={y} stroke="rgba(255,255,255,0.06)" strokeWidth="0.4" />
+              {!reduce &&
+                [0, 1, 2].map((d) => (
+                  <motion.circle
+                    key={d}
+                    cy={y}
+                    r="1.3"
+                    fill="var(--win-accent)"
+                    initial={{ cx: -10, opacity: 0 }}
+                    animate={{ cx: 210, opacity: [0, 1, 1, 0] }}
+                    transition={{
+                      duration: 3.2 + row * 0.4,
+                      delay: d * 1.1 + row * 0.3,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                ))}
+            </g>
+          ))}
+        </svg>
+      </div>
+
     <div className="grid gap-8 lg:grid-cols-2">
       {/* Target groups */}
       <div>
@@ -60,6 +100,7 @@ export function QassasEnginePanel() {
             </motion.li>
           ))}
         </ol>
+      </div>
       </div>
     </div>
   );

@@ -42,6 +42,21 @@ export function WindowProgressNav() {
     return () => observer.disconnect();
   }, [isHome]);
 
+  // Cross-fade the ambient theme tint to the active window's accent.
+  useEffect(() => {
+    if (!isHome) return;
+    const item = WINDOW_NAV.find((w) => w.anchor === activeAnchor);
+    if (item) {
+      document.documentElement.style.setProperty(
+        "--ambient-accent",
+        THEMES[item.theme].accent,
+      );
+    }
+    return () => {
+      document.documentElement.style.setProperty("--ambient-accent", "#c8a45c");
+    };
+  }, [activeAnchor, isHome]);
+
   if (!isHome) return null;
 
   const activeIndex = WINDOW_NAV.findIndex((w) => w.anchor === activeAnchor);
@@ -49,10 +64,10 @@ export function WindowProgressNav() {
 
   return (
     <>
-      {/* Desktop side mini-map */}
+      {/* Tablet + desktop side mini-map */}
       <nav
         aria-label="Window navigator"
-        className="fixed end-4 top-1/2 z-40 hidden -translate-y-1/2 lg:block"
+        className="fixed end-4 top-1/2 z-40 hidden -translate-y-1/2 md:block"
       >
         <ul className="flex flex-col items-end gap-2.5">
           {WINDOW_NAV.map((w) => {
@@ -91,8 +106,8 @@ export function WindowProgressNav() {
         </ul>
       </nav>
 
-      {/* Mobile top progress bar */}
-      <div className="fixed inset-x-0 top-14 z-30 lg:hidden">
+      {/* Mobile top progress bar (phones only; tablet uses the side map) */}
+      <div className="fixed inset-x-0 top-14 z-30 md:hidden">
         <div className="h-0.5 w-full bg-white/5">
           <motion.div
             className="h-full"

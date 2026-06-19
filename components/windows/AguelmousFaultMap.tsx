@@ -22,6 +22,9 @@ export function AguelmousFaultMap() {
     <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
       {/* Fault model visual */}
       <div className="relative overflow-hidden rounded-xl border border-white/10 bg-graphite-950">
+        <div className="pointer-events-none absolute end-2 top-2 z-10 rounded bg-black/50 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-graphite-300">
+          {content.micro.faultLayers}
+        </div>
         <svg viewBox="0 0 200 160" className="h-full w-full" role="img" aria-label="Stylized fault-controlled terrain model">
           <defs>
             <linearGradient id="terrain" x1="0" y1="0" x2="0" y2="1">

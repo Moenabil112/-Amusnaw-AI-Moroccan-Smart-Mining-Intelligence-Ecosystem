@@ -39,7 +39,7 @@ export function EcosystemSection({ full = true }: SectionProps) {
     <EcosystemWindow theme="amusnaw" copy={content.windows.ecosystem} state={content.windowStates.active} fullScreen={full} anchorId="ecosystem">
       <EcosystemOrbit />
       <div className="mt-10">
-        <Eyebrow>How the ecosystem moves from signal to decision</Eyebrow>
+        <Eyebrow>{content.micro.signalToDecision}</Eyebrow>
         <EcosystemSignalCards />
       </div>
     </EcosystemWindow>

@@ -50,6 +50,27 @@ export const ar: SiteContent = {
     learnMore: "اعرف المزيد",
     backToEcosystem: "العودة إلى المنظومة",
   },
+  micro: {
+    signalToDecision: "كيف تنتقل المنظومة من الإشارة إلى القرار",
+    coverageNote:
+      "نطاق المعادن هو طبقة تغطية للذكاء، وليس ادعاءً باحتياطيات مُتحقق منها.",
+    marketReferenceBadge: "مرجع سوقي — ليس تقييماً للأصول",
+    hyrionSeparates: "تفصل HYRION بين مراجع أسعار السلع وتقييم الأصول المُتحقق منه.",
+    relationEnables: "ZYNTRA يفعّل جميع الطبقات",
+    relationFrames: "AKANIL يؤطر الدخول المؤسسي",
+    liveFeed: "تغذية الاستهداف المباشرة",
+    validationGate: "بوابة التحقق",
+    gatewayConsole: "البوابة المؤسسية",
+    stackOnline: "الحزمة متصلة",
+    faultLayers: "طبقات نموذج الفوالق",
+    stateLegend: {
+      pending: "قيد الانتظار",
+      restricted: "مقيّد",
+      verified: "متحقق",
+      reviewReady: "جاهز للمراجعة",
+      decisionReady: "جاهز للقرار",
+    },
+  },
   windowStates: {
     active: "نشط",
     intelligence: "طبقة الذكاء",

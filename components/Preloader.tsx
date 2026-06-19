@@ -14,6 +14,8 @@ export function Preloader() {
   const { content } = useI18n();
   const reduce = useReducedMotion();
   const [done, setDone] = useState(false);
+  // Phase 0: connecting the network · Phase 1: system ready confirmation.
+  const [phase, setPhase] = useState(0);
 
   useEffect(() => {
     if (reduce) {
@@ -27,11 +29,16 @@ export function Preloader() {
       setDone(true);
       return;
     }
-    const t = setTimeout(() => {
+    // Deliberate two-phase boot: connect (≈2.2s) → "system ready" hold (≈0.6s).
+    const toReady = setTimeout(() => setPhase(1), 2200);
+    const toDone = setTimeout(() => {
       setDone(true);
       window.sessionStorage.setItem("amusnaw.booted", "1");
-    }, 2400);
-    return () => clearTimeout(t);
+    }, 2800);
+    return () => {
+      clearTimeout(toReady);
+      clearTimeout(toDone);
+    };
   }, [reduce]);
 
   // Deterministic node coordinates (a stylized Morocco network cloud).
@@ -111,13 +118,30 @@ export function Preloader() {
               </div>
             </motion.div>
 
+            {/* Boot progress bar — fills across the connect phase */}
+            <div className="mt-6 h-0.5 w-48 overflow-hidden rounded-full bg-white/10">
+              <motion.div
+                className="h-full rounded-full bg-accent"
+                initial={{ width: "0%" }}
+                animate={{ width: phase === 1 ? "100%" : "92%" }}
+                transition={{ duration: phase === 1 ? 0.4 : 2.2, ease: "easeInOut" }}
+              />
+            </div>
+
             <motion.p
-              className="mt-5 font-mono text-xs text-accent"
+              key={phase}
+              className="mt-3 flex items-center gap-2 font-mono text-xs text-accent"
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1] }}
-              transition={{ duration: 1.6, delay: 0.8 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
             >
-              {content.preloader.booting}…
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-accent"
+                style={{ boxShadow: "0 0 8px var(--win-accent)" }}
+              />
+              {phase === 1
+                ? content.preloader.ready
+                : `${content.preloader.booting}…`}
             </motion.p>
           </div>
         </motion.div>

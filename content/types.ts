@@ -79,6 +79,27 @@ export interface SiteContent {
     learnMore: string;
     backToEcosystem: string;
   };
+  /** Short UI microcopy (badges, legends, console labels) — kept tri-lingual. */
+  micro: {
+    signalToDecision: string;
+    coverageNote: string;
+    marketReferenceBadge: string;
+    hyrionSeparates: string;
+    relationEnables: string;
+    relationFrames: string;
+    liveFeed: string;
+    validationGate: string;
+    gatewayConsole: string;
+    stackOnline: string;
+    faultLayers: string;
+    stateLegend: {
+      pending: string;
+      restricted: string;
+      verified: string;
+      reviewReady: string;
+      decisionReady: string;
+    };
+  };
   /** Window state labels shown in each window header (status indicator). */
   windowStates: Record<
     | "active"

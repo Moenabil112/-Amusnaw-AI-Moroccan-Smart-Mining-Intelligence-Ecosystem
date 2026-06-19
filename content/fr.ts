@@ -50,6 +50,28 @@ export const fr: SiteContent = {
     learnMore: "En savoir plus",
     backToEcosystem: "Retour à l'écosystème",
   },
+  micro: {
+    signalToDecision: "Comment l'écosystème passe du signal à la décision",
+    coverageNote:
+      "Le périmètre minéral est une couche de couverture d'intelligence, pas une affirmation de réserves vérifiées.",
+    marketReferenceBadge: "Référence de marché — pas une évaluation d'actifs",
+    hyrionSeparates:
+      "HYRION distingue les références de référence des matières premières de l'évaluation d'actifs vérifiée.",
+    relationEnables: "ZYNTRA active toutes les couches",
+    relationFrames: "AKANIL encadre l'entrée institutionnelle",
+    liveFeed: "Flux de ciblage en direct",
+    validationGate: "Porte de validation",
+    gatewayConsole: "Passerelle institutionnelle",
+    stackOnline: "Pile en ligne",
+    faultLayers: "Couches du modèle de failles",
+    stateLegend: {
+      pending: "En attente",
+      restricted: "Restreint",
+      verified: "Vérifié",
+      reviewReady: "Prêt à l'examen",
+      decisionReady: "Prêt à décider",
+    },
+  },
   windowStates: {
     active: "Actif",
     intelligence: "Couche d'intelligence",

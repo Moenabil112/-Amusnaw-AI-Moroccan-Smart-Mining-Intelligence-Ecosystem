@@ -21,7 +21,7 @@ export function MarketValueBoard() {
         </p>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-amber-100">
           <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
-          Market Reference — Not Asset Valuation
+          {content.micro.marketReferenceBadge}
         </span>
       </div>
 

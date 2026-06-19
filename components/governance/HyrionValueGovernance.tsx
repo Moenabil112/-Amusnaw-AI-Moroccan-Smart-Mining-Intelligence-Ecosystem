@@ -27,33 +27,48 @@ export function HyrionValueGovernance() {
   const reduce = useReducedMotion();
   const w = content.windows.hyrion;
 
+  const legend = content.micro.stateLegend;
+  const legendStates = [
+    { label: legend.pending, color: "#d9bd84" },
+    { label: legend.restricted, color: "#e0795b" },
+    { label: legend.verified, color: "#7bd88f" },
+    { label: legend.reviewReady, color: "#3fc7e0" },
+    { label: legend.decisionReady, color: "#3fc7e0" },
+  ];
+
   return (
     <div>
-      {/* Control-layer microcopy + state legend */}
-      <div className="mb-5 rounded-xl border border-accent/25 bg-[color:var(--win-accent)]/[0.06] p-4">
-        <p className="text-sm font-medium text-white">
-          HYRION separates commodity benchmark references from verified asset
-          valuation.
-        </p>
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
-          {[
-            { label: "Pending", color: "#d9bd84" },
-            { label: "Restricted", color: "#e0795b" },
-            { label: "Verified", color: "#7bd88f" },
-            { label: "Review-ready", color: "#3fc7e0" },
-            { label: "Decision-ready", color: "#3fc7e0" },
-          ].map((s) => (
+      {/* Control-console header bar */}
+      <div className="mb-5 overflow-hidden rounded-xl border border-accent/25 bg-[color:var(--win-accent)]/[0.06]">
+        <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-black/30 px-4 py-2">
+          <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite-200">
             <span
-              key={s.label}
-              className="inline-flex items-center gap-1.5 text-[11px] text-graphite-300"
-            >
+              className={`h-1.5 w-1.5 rounded-full bg-accent ${reduce ? "" : "animate-pulse-node"}`}
+            />
+            HYRION · Control Console
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-accent">
+            {content.global.poweredByHyrion}
+          </span>
+        </div>
+        <div className="p-4">
+          <p className="text-sm font-medium text-white">
+            {content.micro.hyrionSeparates}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+            {legendStates.map((s) => (
               <span
-                className="h-2 w-2 rounded-full"
-                style={{ backgroundColor: s.color }}
-              />
-              {s.label}
-            </span>
-          ))}
+                key={s.label}
+                className="inline-flex items-center gap-1.5 text-[11px] text-graphite-300"
+              >
+                <span
+                  className="h-2 w-2 rounded-full"
+                  style={{ backgroundColor: s.color }}
+                />
+                {s.label}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 

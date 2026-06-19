@@ -14,8 +14,40 @@ export function IsseksiCopperValueProduct() {
   const reduce = useReducedMotion();
   const w = content.windows.isseksi;
 
+  const fieldStatus = [
+    { label: "Field Evidence", state: content.micro.stateLegend.verified, color: "#7bd88f" },
+    { label: "Copper Intelligence", state: content.windowStates.active, color: "#c98a5a" },
+    { label: "Recovery Model", state: content.micro.stateLegend.pending, color: "#d9bd84" },
+    { label: content.micro.validationGate, state: content.micro.stateLegend.reviewReady, color: "#3fc7e0" },
+  ];
+
   return (
     <div className="space-y-8">
+      {/* Field-validation dashboard strip */}
+      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+        {fieldStatus.map((s, i) => (
+          <motion.div
+            key={s.label}
+            initial={reduce ? false : { opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: i * 0.06 }}
+            className="rounded-xl border border-white/10 bg-white/[0.03] p-3"
+          >
+            <div className="flex items-center gap-1.5">
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: s.color }}
+              />
+              <span className="font-mono text-[9px] uppercase tracking-wider text-graphite-400">
+                {s.state}
+              </span>
+            </div>
+            <p className="mt-1 text-xs font-semibold text-white">{s.label}</p>
+          </motion.div>
+        ))}
+      </div>
+
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Modules */}
         <div>

@@ -23,8 +23,7 @@ export function MineralUniverse() {
   return (
     <div className="space-y-5">
       <p className="rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-xs text-graphite-400">
-        Mineral scope is an intelligence coverage layer, not a claim of verified
-        reserves.
+        {content.micro.coverageNote}
       </p>
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
       {/* Family selector cluster */}

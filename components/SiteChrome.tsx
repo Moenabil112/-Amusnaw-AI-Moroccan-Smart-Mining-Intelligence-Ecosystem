@@ -14,9 +14,11 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Preloader />
+      {/* Ambient theme tint behind content; recolored by WindowProgressNav. */}
+      <div className="ambient-glow pointer-events-none fixed inset-0 z-0" aria-hidden />
       <TopNav />
       <WindowProgressNav />
-      <main id="main" className="window-scroll pt-14">
+      <main id="main" className="window-scroll relative z-10 pt-14">
         {children}
       </main>
       <SiteFooter />

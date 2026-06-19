@@ -50,6 +50,28 @@ export const en: SiteContent = {
     learnMore: "Learn more",
     backToEcosystem: "Back to ecosystem",
   },
+  micro: {
+    signalToDecision: "How the ecosystem moves from signal to decision",
+    coverageNote:
+      "Mineral scope is an intelligence coverage layer, not a claim of verified reserves.",
+    marketReferenceBadge: "Market Reference — Not Asset Valuation",
+    hyrionSeparates:
+      "HYRION separates commodity benchmark references from verified asset valuation.",
+    relationEnables: "ZYNTRA enables all layers",
+    relationFrames: "AKANIL frames institutional entry",
+    liveFeed: "Live targeting feed",
+    validationGate: "Validation Gate",
+    gatewayConsole: "Institutional gateway",
+    stackOnline: "Stack online",
+    faultLayers: "Fault model layers",
+    stateLegend: {
+      pending: "Pending",
+      restricted: "Restricted",
+      verified: "Verified",
+      reviewReady: "Review-ready",
+      decisionReady: "Decision-ready",
+    },
+  },
   windowStates: {
     active: "Active",
     intelligence: "Intelligence Layer",

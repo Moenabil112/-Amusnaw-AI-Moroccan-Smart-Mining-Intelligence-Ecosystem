@@ -78,6 +78,21 @@ body {
     0 0 60px -12px var(--win-glow);
 }
 
+/* Ambient theme tint — cross-fades to the active window's accent on scroll.
+   Smooth because background-color (not a gradient) is what transitions. */
+.ambient-glow {
+  background-color: var(--ambient-accent, #c8a45c);
+  opacity: 0.05;
+  -webkit-mask-image: radial-gradient(70% 55% at 50% 0%, #000, transparent 72%);
+  mask-image: radial-gradient(70% 55% at 50% 0%, #000, transparent 72%);
+  transition: background-color 0.8s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow {
+    transition: none;
+  }
+}
+
 .text-accent {
   color: var(--win-accent);
 }

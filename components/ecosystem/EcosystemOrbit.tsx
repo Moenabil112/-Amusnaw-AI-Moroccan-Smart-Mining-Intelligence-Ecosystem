@@ -255,12 +255,8 @@ export function EcosystemOrbit() {
           ))}
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-graphite-400">
-          <span>
-            <span className="text-accent">ZYNTRA</span> enables all layers
-          </span>
-          <span>
-            <span className="text-accent">AKANIL</span> frames institutional entry
-          </span>
+          <span>{content.micro.relationEnables}</span>
+          <span>{content.micro.relationFrames}</span>
         </div>
       </div>
     </div>

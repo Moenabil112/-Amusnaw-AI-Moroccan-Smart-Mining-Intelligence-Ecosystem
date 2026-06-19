@@ -85,7 +85,7 @@ export function EcosystemExperience() {
           <IntegratedWorkflow />
         </div>
         <div className="mt-8">
-          <Eyebrow>Signal to decision, in one line each</Eyebrow>
+          <Eyebrow>{content.micro.signalToDecision}</Eyebrow>
           <EcosystemSignalCards />
         </div>
       </WindowFrame>
